@@ -2182,3 +2182,10 @@ st.markdown("""
     </span>
 </div>
 """, unsafe_allow_html=True)
+
+
+if c in disp.columns:
+    if hasattr(styled, "map"):
+        styled = styled.map(_style_var, subset=[c])
+    else:
+        styled = styled.applymap(_style_var, subset=[c])
